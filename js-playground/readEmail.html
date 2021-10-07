@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Email</title>
+</head>
+<body>
+        <input type="email" class="form-control" id="myEmail" value="eric@alphabet.com">
+
+        <p id="welcomeMessage"> </p>
+
+
+        <script>
+            //get the input element and its value property
+
+            var emailText = document.getElementById("myEmail").value ;
+            var name = emailText.split("@")[0];
+            var companyName = emailText.split("@")[1]; 
+
+            var nameTwo = name.slice(1);
+            var capitalizeName = name.charAt(0).toUpperCase() + nameTwo;
+
+           // var finalName = name.length == 2 ? name[0] : null;
+          //  var company = emailText.split(".com");
+
+           let trimmedcompanyName = companyName.replace(/.com/gi, "");
+
+           let companyNameTwo = trimmedcompanyName.slice(1)
+           let capitalizeCompanyName =  trimmedcompanyName.charAt(0).toUpperCase() + companyNameTwo;
+
+            //use regex to extract the name and company
+
+
+            //create an output variable that contains the complete sentence
+            let output = `Hi ${capitalizeName}, welcome to ${capitalizeCompanyName}`;
+
+            //get the welcomeMessage innerHTML
+            document.getElementById("welcomeMessage").innerHTML = output;
+
+        
+
+        </script>
+    
+</body>
+</html>
