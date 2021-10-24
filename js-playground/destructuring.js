@@ -44,3 +44,7 @@ const [g, m, ...rest] = [1, 2, 3, 4, 5, 6];
 console.log(rest); //1,4
 
 //Pass an object as a function's parameter
+const profileUpdate = (profileData) => {
+  const { name, age, nationality } = profileData;
+};
+const profileUser = ({ name, age, nationality }) => {};
