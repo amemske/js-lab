@@ -37,7 +37,7 @@ const [q, r] = [1, 2, 3, 4, 5, 6];
 console.log(q, r); //1,2
 
 const [p, , , t] = [1, 2, 3, 4, 5, 6];
-console.log(q, r); //1,4
+console.log(p, t); //1,4
 
 //rest spread operator
 const [g, m, ...rest] = [1, 2, 3, 4, 5, 6];
