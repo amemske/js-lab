@@ -41,7 +41,7 @@ const menu = [
 //3. Add All button by turning it back into an array
 const categories = [
   'All',
-  ...new Set(
+  ...new Set( //the spread operator makes sure only the elements of the array are added and not the entire array
     menu.map((item) => {
       const { category } = item;
       return category;

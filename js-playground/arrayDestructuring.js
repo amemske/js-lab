@@ -16,6 +16,6 @@ console.log(john, lucy);
 let first = 'john';
 let second = 'Kamau';
 
-//[second, first] = [first, second]
+[second, first] = [first, second]
 
 console.log(first, second);

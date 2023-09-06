@@ -2,7 +2,21 @@
 //Filter - returns based on a condition
 //Find - returns single instance of (object or string etc), returns first match, if no match - undefined
 //Find - is commonly used with API id's to find a unique id
-//Use Quokka.js to see ouput
+
+
+//Both find and filter are array methods in JavaScript that allow you to search and retrieve elements from an array based on certain criteria.
+//The main difference between these methods is that find returns the first element in the array that satisfies a given condition, while filter returns an array of all the elements that satisfy the condition.
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// find the first even number in the array
+const firstEvenNumber = numbers.find(num => num % 2 === 0);
+console.log(firstEvenNumber); // output: 2
+
+// filter even numbers from the array
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // output: [2, 4, 6]
+
 const fruits = ['orange', 'pear', 'lemon'];
 
 const people = [
