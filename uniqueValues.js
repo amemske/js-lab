@@ -37,7 +37,7 @@ const menu = [
 
 //get unique categories
 //1. get all categories using map
-//2. narrow dwon using new set
+//2. narrow dwon using new set // set contains only unique values
 //3. Add All button by turning it back into an array
 const categories = [
   'All',

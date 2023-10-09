@@ -9,13 +9,16 @@
 
 const numbers = [1, 2, 3, 4, 5, 6];
 
-// find the first even number in the array
-const firstEvenNumber = numbers.find(num => num % 2 === 0);
-console.log(firstEvenNumber); // output: 2
+
 
 // filter even numbers from the array
 const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // output: [2, 4, 6]
+
+// find the first even number in the array
+const firstEvenNumber = numbers.find(num => num % 2 === 0);
+console.log(firstEvenNumber); // output: 2
+
 
 const fruits = ['orange', 'pear', 'lemon'];
 
@@ -57,6 +60,7 @@ const developers = people.filter((person) => {
 });
 
 console.log(developers);
+
 //filter - no match
 const ceo = people.filter((person) => {
   return person.position === 'ceo';
@@ -73,14 +77,19 @@ const fruit = fruits.find((fruit) => {
   return fruit === 'lemon';
 });
 console.log(fruit);
+
+
 //no match
 const oldPerson = people.find((person) => {
   return person.age > 45;
 });
 console.log(oldPerson);
+
 //mutiple matches - first match
 const randomPerson = people.find((person) => person.age < 35);
 console.log(randomPerson);
+
+
 
 //using filter to get a single instance similar to find
 const juniorDev = people.filter((person) => person.name === 'john');

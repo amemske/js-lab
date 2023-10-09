@@ -46,8 +46,7 @@ const cart = [
   },
 ];
 
-const cartTotal = cart.reduce(
-  (myCartTotal, cartItem) => {
+const cartTotal = cart.reduce((myCartTotal, cartItem) => {
     console.log(cartItem);
     //get the amount and proce
     const { amount, price } = cartItem;

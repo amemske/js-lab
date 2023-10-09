@@ -25,9 +25,7 @@ const nest = {
   end: { x: 8, y: 1 },
 };
 //destructuting nested object
-const {
-  start: { x: startx, y: starty },
-} = nest;
+const { start: { x: startx, y: starty }, } = nest;
 
 console.log(startx);
 
@@ -44,7 +42,22 @@ const [g, m, ...rest] = [1, 2, 3, 4, 5, 6];
 console.log(rest); //1,4
 
 //Pass an object as a function's parameter
+
+const profileData = {
+  name: "John Doe",
+  age: 30,
+  nationality: "American"
+};
+
 const profileUpdate = (profileData) => {
   const { name, age, nationality } = profileData;
+  console.log(name, age, nationality);
 };
-const profileUser = ({ name, age, nationality }) => {};
+const profileUser = ({ name, age, nationality }) => {
+  console.log(name, age, nationality);
+};
+
+
+
+profileUpdate(profileData); //John Doe 30 American
+profileUser(profileData);  ////John Doe 30 American

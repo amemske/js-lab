@@ -4,7 +4,7 @@
 //uses values from original array to make new ones
 //Add Quokka.js for testing
 
-const people = [
+const people = [  
   {
     name: 'bob',
     age: 40,
@@ -34,7 +34,7 @@ const ages = people.map((person) => {
 
 console.log(ages);
 
-const newPeople = people.map((item) => {
+const newPeople = people.map((item) => { 
   //returning a new object
   return {
     firstName: item.name.toUpperCase(),
@@ -43,12 +43,15 @@ const newPeople = people.map((item) => {
 });
 
 console.log(newPeople);
+console.log(people)
 
 //display it in the browser
 const mappedNames = people.map((person) => {
   console.log(person.name);
   return `<h2>${person.name}</h2>`;
 });
+
+console.log(mappedNames)
 
 const result = document.querySelector('#result');
 //the reults has a comma separator, to remove it use join
