@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <section class="main">
+        <p id="message">Javascript DOM1</p>
+        <p class="other" >Javascript DOM2</p>
+        <p class="other">Javascript DOM3</p>
+        <p class="other">Javascript DOM4</p>
+        <p class="other">Javascript DOM5</p>
+        <span class="quote">testing</span>
+        <div class="desc">This is a pagagraph</div>
+    </section>
+    <section class="school">
+        <div class="teachers" aria-label="teachers">
+            <h2>Teachers</h2>
+            <ul>
+                <li class="teacher">Teacher Ann</li>
+                <li class="teacher">Teacher Job</li>
+                <li class="teacher">Teacher Mathew</li>
+                <li class="teacher">Teacher Erica</li>
+                <li class="teacher">Teacher Diana</li>
+            </ul>
+        </div>
+        <div class="students" aria-label="students">
+            <h2>Students</h2>
+            <ul>
+                <li class="student">Student 1</li>
+                <li class="student">Student 2</li>
+                <li class="student">Student 3</li>
+                <li class="student">Student 4</li>
+                <li class="student">Student 5</li>
+            </ul>
+        </div>
+        <div class="parents" >
+            <ul>
+                <li class="Parent">Parent 1</li>
+                <li class="Parent">Parent 2</li>
+                <li class="Parent">Parent 3</li>
+                <li class="Parent">Parent 4</li>
+                <li class="Parent">Parent 5</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        let msg= document.getElementById("message")
+        let msgtXt= document.getElementById("message").innerHTML
+        console.log(msg)
+        console.log(msgtXt)
+
+        let selectOne = document.querySelector(".other")
+        console.log("selectOne", selectOne)
+        let selectALL = document.querySelectorAll(".other")
+        console.log("selectALL" , selectALL)
+
+//add classes
+let span = document.querySelector(".quote")
+        span.classList.add("black")
+
+        //replace classes using className
+let desc = document.querySelector(".desc")
+desc.className ="replaced"
+
+//computedStyles
+let main = document.querySelector(".main")
+let computedStyle = window.getComputedStyle(main);
+console.log(computedStyle);
+
+//change color
+const teacherHeading = document.querySelector(".teachers h2")
+teacherHeading.style.color = "blue"
+
+//change stye
+const studentsDiv = document.querySelector(".students");
+studentsDiv.style.backgroundColor = "green";
+
+const studentItems = document.querySelectorAll(".student"); //list items
+studentItems.forEach((student) => {
+    student.style.border = "1px solid red";
+});
+
+//getAttribute
+const teachersDiv = document.querySelector(".teachers");
+const ariaLabelValue = teachersDiv.getAttribute("aria-label");
+console.log(ariaLabelValue); // Outputs: "teachers"
+
+//setAttribute
+const studentsDiv1 = document.querySelector(".students");
+studentsDiv1.setAttribute("data-info", "student-info");
+// Now the "students" div has a "data-info" attribute with the value "student-info".
+
+//hasAttribute
+const studentsDiv2 = document.querySelector(".students");
+const hasDataInfo = studentsDiv2.hasAttribute("data-info");
+console.log(hasDataInfo); // Outputs: true
+
+
+//removeAttribute
+const studentsDiv3 = document.querySelector(".students");
+studentsDiv3.removeAttribute("data-info");
+// The "data-info" attribute has been removed from the "students" div.
+
+
+//after
+const parentsDiv = document.querySelector(".parents");
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "Additional content after parents";
+parentsDiv.after(newParagraph);
+
+
+//append
+const parentList = document.querySelector(".parents ul");
+const newParent = document.createElement("li");
+newParent.textContent = "Grade 1 Parent";
+parentList.append(newParent);
+console.log(parentList)
+
+
+//prepend
+const studentsList = document.querySelector(".students ul");
+const newStudent1 = document.createElement("li");
+newStudent1.textContent = "Student 0";
+studentsList.prepend(newStudent1);
+
+
+//insertAdjacentHTML
+const studentsDiv4 = document.querySelector(".students");
+const newContent = "<div class='alert'>Important Notice!</div>";
+studentsDiv4.insertAdjacentHTML("beforebegin", newContent);
+
+
+//replaceChild
+const teachersList = document.querySelector(".teachers ul");
+const newTeacher = document.createElement("li");
+newTeacher.textContent = "Teacher John";
+const oldTeacher = teachersList.querySelector(".teacher");
+teachersList.replaceChild(newTeacher, oldTeacher);
+
+//cloneNode
+const teachersDiv7 = document.querySelector(".teachers");
+const clonedTeachersDiv = teachersDiv7.cloneNode(true);
+teachersDiv7.parentNode.insertBefore(clonedTeachersDiv, teachersDiv7.nextSibling);
+
+
+//removeChild
+const studentsList2 = document.querySelector(".students ul");
+const studentToRemove = studentsList2.querySelector(".student");
+studentsList2.removeChild(studentToRemove);
+
+
+//insertBefore
+const studentsList3 = document.querySelector(".students ul");
+const newStudent2 = document.createElement("li");
+newStudent2.textContent = "Student 21";
+const existingStudent = studentsList3.querySelector(".student");
+studentsList3.insertBefore(newStudent, existingStudent);
+
+    </script>
+</body>
+</html>

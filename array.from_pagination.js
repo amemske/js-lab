@@ -2,6 +2,8 @@
 const udemy = 'udemy'
 
 console.log(Array.from(udemy))
+
+
 //create a new array with this length length: 120
 const items = Array.from({length: 120}, (_, index) =>{
   return index
