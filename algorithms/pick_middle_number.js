@@ -5,6 +5,6 @@ const myarray = [2,7,8,9,0];
 //get the postion  5/2 = 2 after division, don't add 1 since positions start from zero
 
 const length = myarray.length
-const position = Math.floor(length/2);
+const position = Math.floor(length/2);//index
 console.log(myarray[position]);
 

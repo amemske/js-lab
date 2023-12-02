@@ -1,5 +1,5 @@
 //count the number of repetition in a string
-//if a string is ffferfftoo the output should be 4f1e1r1t20
+//if a string is ffferfftoo the output should be 3f1e1r2f1t20
 
 function countLetters(str){
     //convert string to array
@@ -30,6 +30,6 @@ function countLetters(str){
 }
 
 
-const repetitiveString = 'ffferfftoo'
+const repetitiveString = 'ffff'
 
-console.log(countLetters(repetitiveString))
+console.log(countLetters(repetitiveString)) //3f1e1r2f1t2o

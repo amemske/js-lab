@@ -61,8 +61,9 @@
 //add classes
 let span = document.querySelector(".quote")
         span.classList.add("black")
+        //span.classList.remove("black")
 
-        //replace classes using className
+//replace classes using className
 let desc = document.querySelector(".desc")
 desc.className ="replaced"
 
@@ -75,10 +76,11 @@ console.log(computedStyle);
 const teacherHeading = document.querySelector(".teachers h2")
 teacherHeading.style.color = "blue"
 
-//change stye
+//change background
 const studentsDiv = document.querySelector(".students");
 studentsDiv.style.backgroundColor = "green";
 
+//border
 const studentItems = document.querySelectorAll(".student"); //list items
 studentItems.forEach((student) => {
     student.style.border = "1px solid red";
